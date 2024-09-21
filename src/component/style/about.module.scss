@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  .about {
+    width: 650px;
+    height: 750px;
+    padding: 100px;
+    text-align: center;
+    border: 3px solid #57648e;
+    position: relative;
+    border-radius: 30px;
+    .img__top {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+    }
+    .img__bottom {
+      position: absolute;
+      right: -2px;
+      bottom: -2px;
+    }
+    .name {
+      font-size: 45px;
+      color: #57648e;
+      margin-bottom: 45px;
+    }
+    .text {
+      font-size: 23px;
+      line-height: 38px;
+      text-transform: uppercase;
+    }
+  }
+
+  .img {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    border: 3px solid #57648e;
+    border-radius: 50%;
+    width: 310px;
+    height: 310px;
+    padding: 12px;
+    background-color: #fff;
+  }
+}
