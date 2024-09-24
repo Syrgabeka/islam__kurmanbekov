@@ -2,7 +2,7 @@ import {
   Instagramm,
   Microphone,
   Phone,
-  SharpCopyright,
+  Telegramm,
   Whatsapp,
 } from "../assets/icon";
 import styles from "./style/footer.module.scss";
@@ -16,21 +16,30 @@ const Footer = () => {
 
       <div className={styles.center}>
         <a
-          href="https://t.me/nurai_ii"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={SharpCopyright} alt="Copyright" /> Copyright 2024 designed
-          by Nurai
-        </a>
-
-        <a
           href="https://t.me/Sur123pog"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={SharpCopyright} alt="Copyright" /> Copyright 2024 developed
-          by Syrgabek
+          <img src={Telegramm} alt="Copyright" /> Copyright 2024 developed by
+          Syrgabek
+        </a>
+
+        <a
+          href="https://t.me/nurai_ii"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Telegramm} alt="Copyright" /> Copyright 2024 designed by
+          Nurai
+        </a>
+
+        <a
+          href="https://t.me/Makka567"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Telegramm} alt="Copyright" /> Copyright 2024 project manager
+          by Adilet
         </a>
       </div>
 
