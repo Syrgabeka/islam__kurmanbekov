@@ -1,9 +1,9 @@
 .footer {
   background-color: #7883a3;
-  height: 320px;
   display: flex;
   justify-content: space-between;
   padding: 5% 5% 2% 5%;
+  position: relative;
   .left {
     display: flex;
     justify-content: end;
@@ -29,6 +29,34 @@
       align-items: center;
       gap: 20px;
       text-decoration: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    min-height: 150px;
+    .left {
+      margin-bottom: 25%;
+      img {
+        width: 70px;
+      }
+    }
+    .center {
+      position: absolute;
+      font-size: 10px;
+      bottom: 10px;
+      right: 27%;
+      img {
+        width: 10px;
+      }
+    }
+    .right {
+      a {
+        font-size: 14px;
+        gap: 5px;
+      }
+      img {
+        width: 20px;
+      }
     }
   }
 }

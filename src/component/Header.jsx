@@ -1,16 +1,27 @@
+import { useState, useEffect } from "react";
 import styles from "./style/header.module.scss";
 import { HeaderRight, HeaderTop } from "../assets/bgcImg";
-import { PhotoWeb } from "../assets/img";
+import { PhotoMobile, PhotoWeb } from "../assets/img";
 
 const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
-      <div className={styles.top__img}>
-        <img src={HeaderTop} />
-      </div>
-      <div className={styles.right__img}>
-        <img src={HeaderRight} />
-      </div>
+      <img src={HeaderTop} className={styles.top__img} />
+      <img src={HeaderRight} className={styles.right__img} />
       <div className={styles.contant}>
         <div className={styles.header}>
           <p className={styles.name}>
@@ -19,7 +30,11 @@ const Header = () => {
           <p className={styles.statys}>Эстрада-учитель</p>
         </div>
         <div className={styles.main}>
-          <img src={PhotoWeb} className={styles.photo} />
+          {windowWidth <= 700 ? (
+            <img src={PhotoMobile} className={styles.photo} />
+          ) : (
+            <img src={PhotoWeb} className={styles.photo} />
+          )}
           <div className={styles.description}>
             <p>
               Я, Ислам Курманбеков, являюсь профессиональным певцом и

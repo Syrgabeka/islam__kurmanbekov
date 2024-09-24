@@ -1,8 +1,23 @@
 import styles from "./style/about.module.scss";
 import { MainBotton, MainTop } from "../assets/bgcImg";
-import { Circle } from "../assets/img";
+import { Circle, ImgMobile } from "../assets/img";
+import { useEffect, useState } from "react";
 
 const AboutMe = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.about}>
@@ -14,7 +29,11 @@ const AboutMe = () => {
           значение, и я тщательно подхожу к работе, чтобы добиться идеального
           результата.
         </p>
-        <img src={MainTop} className={styles.img__top} />
+        {windowWidth <= 850 ? (
+          <img src={ImgMobile} className={styles.img__top} />
+        ) : (
+          <img src={MainTop} className={styles.img__top} />
+        )}
       </div>
       <div className={styles.about}>
         <p className={styles.name}>МОЯ ЦЕЛЬ</p>
@@ -23,10 +42,14 @@ const AboutMe = () => {
           также развиваться как профессионал в звукозаписи, чтобы каждый мой
           трек отличался высоким качеством и глубоким эмоциональным содержанием.
         </p>
-        <img src={MainBotton} className={styles.img__bottom} />
+        {windowWidth <= 850 ? (
+          <img src={ImgMobile} className={styles.img__top} />
+        ) : (
+          <img src={MainBotton} className={styles.img__bottom} />
+        )}
       </div>
       <div className={styles.img}>
-        <img src={Circle} />
+        <img src={Circle} className={styles.photo} />
       </div>
     </div>
   );
