@@ -54,7 +54,18 @@ const Header = () => {
             </p>
           </div>
         </div>
-        <button className={styles.button}>НАПИСАТЬ</button>
+        <button
+          className={styles.button}
+          onClick={() =>
+            window.open(
+              "https://wa.me/996709346991",
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
+        >
+          НАПИСАТЬ
+        </button>
       </div>
     </div>
   );

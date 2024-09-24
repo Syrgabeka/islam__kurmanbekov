@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div className={styles.center}>
         <a
-          href="https://t.me/@nurai_ii"
+          href="https://t.me/nurai_ii"
           target="_blank"
           rel="noopener noreferrer"
         >
