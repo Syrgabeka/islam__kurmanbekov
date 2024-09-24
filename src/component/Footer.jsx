@@ -15,7 +15,11 @@ const Footer = () => {
       </div>
 
       <div className={styles.center}>
-        <a href="">
+        <a
+          href="https://t.me/@nurai_ii"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={SharpCopyright} alt="Copyright" /> Copyright 2024 designed
           by Nurai
         </a>
